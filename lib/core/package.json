@@ -1,0 +1,41 @@
+{
+  "name": "@kombu/core",
+  "version": "0.0.0",
+  "author": "dangreco <dan.greco@live.com>",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "check": "pnpm run build && check-export-map",
+    "clean": "shx rm -rf ./node_modules",
+    "lint": "eslint src/**/*",
+    "format": "prettier --write src/**/*",
+    "build": "tsup"
+  },
+  "eslintConfig": {
+    "extends": "@kombu/eslint-config"
+  },
+  "prettier": "@kombu/prettier-config",
+  "devDependencies": {
+    "@kombu/eslint-config": "workspace:^",
+    "@kombu/prettier-config": "workspace:^",
+    "@kombu/tsup-config": "workspace:^",
+    "@types/node": "^20.4.2",
+    "check-export-map": "^1.3.0",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "shx": "^0.3.4",
+    "tslib": "^2.6.0",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  }
+}
