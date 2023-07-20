@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "clean": "lerna run clean && shx rm -rf ./node_modules"
+    "clean": "lerna run clean && shx rm -rf ./node_modules",
+    "publish": "lerna publis --no-private"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.2",
