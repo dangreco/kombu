@@ -7,8 +7,7 @@
     "clean": "shx rm -rf ./node_modules"
   },
   "files": [
-    "src",
-    "dist"
+    "src"
   ],
   "devDependencies": {
     "prettier": "^3.0.0",
