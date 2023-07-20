@@ -1,5 +1,5 @@
 {
-  "name": "@kombu/core",
+  "name": "@kombu/dmo-hello",
   "version": "0.0.0",
   "author": "dangreco <dan.greco@live.com>",
   "license": "MIT",
@@ -11,44 +11,48 @@
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "default": "./dist/index.modern.mjs"
+      "default": "./dist/index.modern.js"
     },
     "./package.json": "./package.json"
   },
   "scripts": {
-    "check": "pnpm run build && check-export-map",
     "clean": "shx rm -rf ./node_modules",
     "lint": "eslint src/**/*",
     "format": "prettier --write src/**/*",
-    "build": "microbundle"
+    "build": "microbundle",
+    "storybook": "storybook dev -p 6006"
   },
   "eslintConfig": {
     "extends": "@kombu/eslint-config"
   },
   "prettier": "@kombu/prettier-config",
   "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
     "@kombu/eslint-config": "workspace:^",
     "@kombu/prettier-config": "workspace:^",
-    "@types/node": "^20.4.2",
+    "@storybook/addon-essentials": "^7.1.0",
+    "@storybook/addon-interactions": "^7.1.0",
+    "@storybook/addon-links": "^7.1.0",
+    "@storybook/react": "^7.1.0",
+    "@storybook/react-webpack5": "^7.1.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "check-export-map": "^1.3.0",
+    "babel-loader": "^9.1.3",
     "custom-card-helpers": "^1.9.0",
     "eslint": "^8.45.0",
     "microbundle": "^0.15.1",
     "prettier": "^3.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "shx": "^0.3.4",
+    "storybook": "^7.1.0",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
-  "peerDependencies": {
-    "custom-card-helpers": ">=1.9.0",
-    "react": ">=17",
-    "react-dom": ">=17"
-  },
   "dependencies": {
-    "jotai": "^2.2.2"
+    "@kombu/core": "workspace:^",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
