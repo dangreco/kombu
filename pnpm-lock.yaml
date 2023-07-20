@@ -157,10 +157,10 @@ importers:
         version: 2.2.2
     devDependencies:
       '@kombu/eslint-config':
-        specifier: ^0.0.7
+        specifier: ^0.0.8
         version: link:../../cfg/eslint
       '@kombu/prettier-config':
-        specifier: ^0.0.7
+        specifier: ^0.0.8
         version: link:../../cfg/prettier
       '@types/node':
         specifier: ^20.4.2
