@@ -9,5 +9,6 @@
   "devDependencies": {
     "prettier": "^3.0.0",
     "shx": "^0.3.4"
-  }
+  },
+  "gitHead": "43ce9f6693b79da8fe2a2cc4d69129a30799ffd2"
 }
