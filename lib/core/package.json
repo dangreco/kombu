@@ -20,7 +20,8 @@
     "clean": "shx rm -rf ./node_modules",
     "lint": "eslint src/**/*",
     "format": "prettier --write src/**/*",
-    "build": "microbundle"
+    "build": "microbundle",
+    "publish": "npm publish"
   },
   "eslintConfig": {
     "extends": "@kombu/eslint-config"
@@ -48,5 +49,5 @@
   "dependencies": {
     "jotai": "^2.2.2"
   },
-  "gitHead": "1de069fbb4fdc788a30ea6fd8cce18f26b8629b1"
+  "gitHead": "2dbc5f1dd148d549da82f5369392551e593f3082"
 }
