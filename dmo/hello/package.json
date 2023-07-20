@@ -2,6 +2,7 @@
   "name": "@kombu/dmo-hello",
   "version": "0.0.0",
   "author": "dangreco <dan.greco@live.com>",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "clean": "shx rm -rf ./node_modules",
