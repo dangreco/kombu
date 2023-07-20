@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "check": "pnpm run build && check-export-map",
-    "clean": "shx rm -rf ./node_modules",
+    "clean": "shx rm -rf ./dist",
     "lint": "eslint src/**/*",
     "format": "prettier --write src/**/*",
     "build": "microbundle",
@@ -53,5 +53,5 @@
   "dependencies": {
     "jotai": "^2.2.2"
   },
-  "gitHead": "43ce9f6693b79da8fe2a2cc4d69129a30799ffd2"
+  "gitHead": "6bfdbf3ec3864c2eb376325b35db3d8b45a94331"
 }

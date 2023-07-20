@@ -1,11 +1,15 @@
-35 error Error: Command failed with exit code 1: git add -- lib/core/package.json lerna.json pnpm-lock.yaml
-35 error The following paths are ignored by one of your .gitignore files:
-35 error pnpm-lock.yaml
-35 error hint: Use -f if you really want to add them.
-35 error hint: Turn this message off by running
-35 error hint: "git config advice.addIgnoredFile false"
-35 error     at makeError (/home/dan/Projects/kombu/node_modules/.pnpm/execa@5.0.0/node_modules/execa/lib/error.js:59:11)
-35 error     at handlePromise (/home/dan/Projects/kombu/node_modules/.pnpm/execa@5.0.0/node_modules/execa/index.js:114:26)
-35 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-35 error     at async VersionCommand.updatePackageVersions (/home/dan/Projects/kombu/node_modules/.pnpm/lerna@7.1.3/node_modules/lerna/dist/index.js:8319:11)
-35 error     at async Promise.all (index 0)
+0 silly argv { _: [ 'run' ], lernaVersion: '7.1.3', '$0': 'lerna', script: 'lint' }
+1 notice cli v7.1.3
+2 verbose packageConfigs Package manager "pnpm" detected. Resolving packages using `pnpm-workspace.yaml`.
+3 verbose rootPath /home/dan/Projects/kombu
+4 error TypeError [ERR_INVALID_ARG_TYPE]: Failed to process the project graph with "nx-js-graph-plugin".
+4 error The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+4 error     at writeFileSync (node:fs:2240:5)
+4 error     at writeLastProcessedLockfileHash (/home/dan/.nvm/versions/node/v19.8.1/lib/node_modules/lerna/node_modules/nx/src/plugins/js/index.js:49:28)
+4 error     at /home/dan/.nvm/versions/node/v19.8.1/lib/node_modules/lerna/node_modules/nx/src/plugins/js/index.js:25:17
+4 error     at Generator.next (<anonymous>)
+4 error     at /home/dan/.nvm/versions/node/v19.8.1/lib/node_modules/lerna/node_modules/tslib/tslib.js:169:75
+4 error     at new Promise (<anonymous>)
+4 error     at Object.__awaiter (/home/dan/.nvm/versions/node/v19.8.1/lib/node_modules/lerna/node_modules/tslib/tslib.js:165:16)
+4 error     at Object.processProjectGraph (/home/dan/.nvm/versions/node/v19.8.1/lib/node_modules/lerna/node_modules/nx/src/plugins/js/index.js:15:57)
+4 error     at /home/dan/.nvm/versions/node/v19.8.1/lib/node_modules/lerna/node_modules/nx/src/project-graph/build-project-graph.js:121:38
