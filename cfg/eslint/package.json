@@ -1,0 +1,16 @@
+{
+  "name": "@kombu/eslint-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "shx rm -rf ./node_modules"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "shx": "^0.3.4"
+  }
+}

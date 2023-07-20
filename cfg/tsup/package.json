@@ -1,0 +1,17 @@
+{
+  "name": "@kombu/tsup-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "shx rm -rf ./node_modules",
+    "build": "tsup --config src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "shx": "^0.3.4",
+    "tsup": "^7.1.0"
+  }
+}

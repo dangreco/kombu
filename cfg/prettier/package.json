@@ -1,0 +1,13 @@
+{
+  "name": "@kombu/prettier-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "shx rm -rf ./node_modules"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "shx": "^0.3.4"
+  }
+}

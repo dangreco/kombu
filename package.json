@@ -1,0 +1,12 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "clean": "lerna run clean && shx rm -rf ./node_modules"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "lerna": "^7.1.3",
+    "shx": "^0.3.4"
+  }
+}
