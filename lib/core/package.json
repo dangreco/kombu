@@ -1,6 +1,6 @@
 {
   "name": "@kombu/core",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "author": "dangreco <dan.greco@live.com>",
   "license": "MIT",
   "source": "./src/index.ts",
@@ -32,8 +32,8 @@
   },
   "prettier": "@kombu/prettier-config",
   "devDependencies": {
-    "@kombu/eslint-config": "^0.0.8",
-    "@kombu/prettier-config": "^0.0.8",
+    "@kombu/eslint-config": "^0.1.0",
+    "@kombu/prettier-config": "^0.1.0",
     "@types/node": "^20.4.2",
     "check-export-map": "^1.3.0",
     "custom-card-helpers": "^1.9.0",
