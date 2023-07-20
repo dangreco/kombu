@@ -154,10 +154,10 @@ importers:
         version: 2.2.2
     devDependencies:
       '@kombu/eslint-config':
-        specifier: workspace:^
+        specifier: ^0.0.0
         version: link:../../cfg/eslint
       '@kombu/prettier-config':
-        specifier: workspace:^
+        specifier: ^0.0.0
         version: link:../../cfg/prettier
       '@types/node':
         specifier: ^20.4.2
