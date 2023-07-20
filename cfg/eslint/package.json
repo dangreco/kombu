@@ -6,6 +6,10 @@
   "scripts": {
     "clean": "shx rm -rf ./node_modules"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",

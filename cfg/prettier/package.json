@@ -6,6 +6,10 @@
   "scripts": {
     "clean": "shx rm -rf ./node_modules"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "devDependencies": {
     "prettier": "^3.0.0",
     "shx": "^0.3.4"

@@ -15,6 +15,10 @@
     },
     "./package.json": "./package.json"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "check": "pnpm run build && check-export-map",
     "clean": "shx rm -rf ./node_modules",

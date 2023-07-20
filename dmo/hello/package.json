@@ -12,6 +12,10 @@
     "build": "rollup -c --configPlugin @rollup/plugin-typescript",
     "dev": "pnpm run build --watch"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "eslintConfig": {
     "extends": "@kombu/eslint-config"
   },
