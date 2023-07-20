@@ -1,5 +1,4 @@
-import { FunctionComponent } from 'react';
-import { createRoot } from 'react-dom/client';
+import { render, FunctionComponent } from 'preact';
 import { Provider, createStore } from 'jotai';
 import { HomeAssistant, LovelaceCardConfig } from 'custom-card-helpers';
 import { atoms } from '../store';
@@ -13,29 +12,30 @@ declare global {
 
 export function initialize(C: FunctionComponent, options: CardOptions) {
   class Card extends HTMLElement {
-    private root;
     private store = createStore();
+    private rendered = false;
 
-    constructor() {
-      super();
-      this.root = createRoot(this);
-      this._render();
-    }
-
-    private _render() {
-      this.root.render(
-        <Provider store={this.store}>
-          <C />
-        </Provider>,
-      );
-    }
+    private _render = () => {
+      if (!this.rendered) {
+        this.rendered = true;
+        console.log('rendering');
+        render(
+          <Provider store={this.store}>
+            <C />
+          </Provider>,
+          this,
+        );
+      }
+    };
 
     set hass(hass: HomeAssistant | undefined) {
       this.store.set(atoms.hass, hass);
+      this._render();
     }
 
     setConfig(config: LovelaceCardConfig | undefined) {
       this.store.set(atoms.config, config);
+      this._render();
     }
 
     getCardSize() {
