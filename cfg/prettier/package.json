@@ -7,8 +7,9 @@
     "src"
   ],
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "prettier": "^3.0.0",
     "shx": "^0.3.4"
   },
-  "gitHead": "e0a1a11be4b84b2ce2419b731c32bd11af640b39"
+  "gitHead": "eac6cf66bc116a1186fd09a60bef19de20a9eeb3"
 }

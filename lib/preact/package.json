@@ -1,5 +1,5 @@
 {
-  "name": "@kombu/core",
+  "name": "@kombu/preact",
   "version": "0.1.0",
   "author": "dangreco <dan.greco@live.com>",
   "homepage": "https://github.com/dangreco/kombu#readme",
@@ -32,23 +32,23 @@
   },
   "prettier": "@kombu/prettier-config",
   "devDependencies": {
+    "@kombu/core": "workspace:^",
     "@kombu/eslint-config": "workspace:^",
     "@kombu/prettier-config": "workspace:^",
     "check-export-map": "^1.3.0",
-    "custom-card-helpers": "^1.9.0",
     "eslint": "^8.45.0",
-    "home-assistant-js-websocket": "^8.2.0",
     "jotai": "^2.2.2",
     "microbundle": "^0.15.1",
+    "preact": "^10.16.0",
     "prettier": "^3.0.0",
     "shx": "^0.3.4",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
   "peerDependencies": {
-    "custom-card-helpers": "^1.9.0",
-    "home-assistant-js-websocket": "^8.2.0",
-    "jotai": "^2.2.2"
+    "@kombu/core": "workspace:^",
+    "jotai": "^2.2.2",
+    "preact": "^10.16.0"
   },
   "repository": {
     "type": "git",
