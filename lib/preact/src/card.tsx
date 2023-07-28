@@ -1,6 +1,8 @@
-import { FunctionalComponent, render } from 'preact';
-import { CardOptions, defineCard as define } from '@kombu/core';
 import { Provider } from 'jotai';
+import { FunctionalComponent, render } from 'preact';
+
+import { CardOptions, defineCard as define } from '@kombu/core';
+
 import { OptionsWithMiddleware } from './types';
 import { apply } from './utils';
 

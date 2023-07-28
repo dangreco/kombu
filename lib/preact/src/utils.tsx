@@ -1,4 +1,5 @@
 import { ComponentChildren } from 'preact';
+
 import { Middleware } from './types';
 
 export function apply(root: HTMLElement, middleware: Middleware[], children: ComponentChildren) {

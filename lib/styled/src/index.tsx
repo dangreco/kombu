@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 /* eslint-disable react/display-name */
 import type { FunctionComponent, PropsWithChildren } from 'react';
 import styled, { StyleSheetManager } from 'styled-components';

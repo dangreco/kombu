@@ -1,4 +1,5 @@
 import { PropsWithChildren } from 'react';
+
 import { Middleware } from './types';
 
 export function apply(

@@ -1,6 +1,6 @@
-import { atom } from 'jotai/vanilla';
 import { CurrentUser, HomeAssistant, LovelaceCardConfig } from 'custom-card-helpers';
 import { HassEntities } from 'home-assistant-js-websocket';
+import { atom } from 'jotai/vanilla';
 
 /* Base Atoms */
 export const hass = atom<HomeAssistant | undefined>(undefined);
