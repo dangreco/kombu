@@ -1,6 +1,6 @@
 {
   "name": "@kombu/react",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "dangreco <dan.greco@live.com>",
   "homepage": "https://github.com/dangreco/kombu#readme",
   "license": "MIT",
@@ -33,8 +33,8 @@
   "prettier": "@kombu/prettier-config",
   "devDependencies": {
     "@kombu/core": "workspace:^",
-    "@kombu/eslint-config": "^0.1.0",
-    "@kombu/prettier-config": "^0.1.0",
+    "@kombu/eslint-config": "^1.0.0",
+    "@kombu/prettier-config": "^1.0.0",
     "@types/react": "^18.2.17",
     "@types/react-dom": "^18.2.7",
     "check-export-map": "^1.3.0",
