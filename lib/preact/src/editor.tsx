@@ -1,7 +1,7 @@
 import { Provider } from 'jotai';
 import { FunctionalComponent, render } from 'preact';
 
-import { CardEditorOptions, defineEditor as define } from '@kombu/core';
+import { CardEditor, CardEditorOptions, defineEditor as define } from '@kombu/core';
 
 import { OptionsWithMiddleware } from './types';
 import { apply } from './utils';
@@ -9,8 +9,8 @@ import { apply } from './utils';
 export function defineEditor(
   C: FunctionalComponent,
   options: CardEditorOptions & OptionsWithMiddleware,
-) {
-  define((root, store) => {
+): CardEditor {
+  return define((root, store) => {
     render(
       <Provider store={store}>
         {options.middleware ? apply(root, options.middleware, <C />) : <C />}

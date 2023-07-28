@@ -2,7 +2,7 @@ import { Provider } from 'jotai';
 import { FunctionComponent } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { CardEditorOptions, defineEditor as define } from '@kombu/core';
+import { CardEditor, CardEditorOptions, defineEditor as define } from '@kombu/core';
 
 import { OptionsWithMiddleware } from './types';
 import { apply } from './utils';
@@ -10,8 +10,8 @@ import { apply } from './utils';
 export function defineEditor(
   C: FunctionComponent,
   options: CardEditorOptions & OptionsWithMiddleware,
-) {
-  define((root, store) => {
+): CardEditor {
+  return define((root, store) => {
     const reactRoot = createRoot(root);
     reactRoot.render(
       <Provider store={store}>

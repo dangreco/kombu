@@ -1,13 +1,14 @@
 import { LovelaceCardConfig, LovelaceCardEditor, fireEvent } from 'custom-card-helpers';
-import { CardEditorOptions, Store } from './types';
 import { createStore } from 'jotai/vanilla';
+
 import { atoms } from './state';
+import { CardEditor, CardEditorOptions, Store } from './types';
 
 export function defineEditor(
   mount: (root: HTMLElement, store: Store) => void,
   options: CardEditorOptions,
-) {
-  class CardEditor extends HTMLElement implements LovelaceCardEditor {
+): CardEditor {
+  class Editor extends HTMLElement implements LovelaceCardEditor {
     private store = createStore();
 
     public async setConfig(config: LovelaceCardConfig | undefined) {
@@ -30,5 +31,9 @@ export function defineEditor(
     }
   }
 
-  customElements.define(options.name, CardEditor);
+  customElements.define(options.name, Editor);
+
+  return {
+    getConfigElement: async () => document.createElement(options.name) as LovelaceCardEditor,
+  };
 }

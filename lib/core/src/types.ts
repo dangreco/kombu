@@ -1,14 +1,10 @@
-import {
-  HomeAssistant,
-  LovelaceCardConfig,
-  LovelaceCardEditor,
-} from 'custom-card-helpers';
+import { HomeAssistant, LovelaceCardConfig, LovelaceCardEditor } from 'custom-card-helpers';
 import type { createStore } from 'jotai/vanilla';
 
 export type Store = ReturnType<typeof createStore>;
 
-export type Config<T extends Record<string, unknown> = Record<string, never>> =
-  LovelaceCardConfig & T;
+export type Config<T extends Record<string, unknown> = Record<string, never>> = LovelaceCardConfig &
+  T;
 
 export interface RegisterCardParams {
   type: string;
@@ -18,9 +14,7 @@ export interface RegisterCardParams {
   documentationURL?: string;
 }
 
-export interface CardOptions<
-  C extends LovelaceCardConfig = LovelaceCardConfig,
-> {
+export interface CardOptions<C extends LovelaceCardConfig = LovelaceCardConfig> {
   card: RegisterCardParams;
   getConfigElement?(): Promise<LovelaceCardEditor>;
   getStubConfig?(hass: HomeAssistant): Promise<C>;
@@ -29,3 +23,5 @@ export interface CardOptions<
 export interface CardEditorOptions {
   name: string;
 }
+
+export type CardEditor = Pick<CardOptions, 'getConfigElement'>;
