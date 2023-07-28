@@ -11,5 +11,8 @@
     "prettier": "^3.0.0",
     "shx": "^0.3.4"
   },
-  "gitHead": "eac6cf66bc116a1186fd09a60bef19de20a9eeb3"
+  "gitHead": "eac6cf66bc116a1186fd09a60bef19de20a9eeb3",
+  "publishConfig": {
+    "access": "public"
+  }
 }

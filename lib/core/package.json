@@ -56,5 +56,8 @@
   },
   "bugs": {
     "url": "https://github.com/dangreco/kombu/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
