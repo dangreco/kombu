@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
+import { React } from 'mdi-material-ui';
 import { FunctionComponent } from 'react';
 
-import { useConfig, useEntity, useUser } from '@kombu/hooks';
+import { useConfig, useEntity, useUser } from '@kombu/react';
 
 import { Config } from './config';
 
@@ -16,6 +17,12 @@ const Card: FunctionComponent = () => {
   return (
     <ha-card>
       <Root>
+        <Header>
+          <React />
+          <span>
+            <b>@kombu/react</b>
+          </span>
+        </Header>
         <Text>Hey {firstName}!</Text>
         <Text>
           It is <b>{timeOfDay}.</b>
@@ -31,6 +38,14 @@ const Card: FunctionComponent = () => {
 };
 
 export default Card;
+
+const Header = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+`;
 
 const Root = styled.div`
   padding: 1rem;

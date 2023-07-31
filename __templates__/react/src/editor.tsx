@@ -1,7 +1,7 @@
 import TextField from '@mui/material/TextField';
 import { FunctionComponent } from 'react';
 
-import { useConfig } from '@kombu/hooks';
+import { useConfig } from '@kombu/react';
 
 import { Config } from './config';
 

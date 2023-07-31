@@ -41,14 +41,14 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@kombu/react-emotion": "workspace:^",
-    "@kombu/hooks": "workspace:^",
-    "@kombu/react-mui": "workspace:^",
     "@kombu/react": "workspace:^",
+    "@kombu/react-emotion": "workspace:^",
+    "@kombu/react-mui": "workspace:^",
     "@mui/material": "^5.14.2",
     "custom-card-helpers": "^1.9.0",
     "home-assistant-js-websocket": "^8.2.0",
     "jotai": "^2.2.3",
+    "mdi-material-ui": "^7.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
