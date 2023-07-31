@@ -20,8 +20,10 @@ export interface CardOptions<C extends LovelaceCardConfig = LovelaceCardConfig> 
   getStubConfig?(hass: HomeAssistant): Promise<C>;
 }
 
-export interface CardEditorOptions {
+export interface EditorOptions {
   name: string;
 }
 
 export type CardEditor = Pick<CardOptions, 'getConfigElement'>;
+
+export type MountFn = (root: HTMLElement, store: Store) => void;

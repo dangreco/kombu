@@ -2,12 +2,9 @@ import { LovelaceCardConfig, LovelaceCardEditor, fireEvent } from 'custom-card-h
 import { createStore } from 'jotai/vanilla';
 
 import { atoms } from './state';
-import { CardEditor, CardEditorOptions, Store } from './types';
+import { CardEditor, EditorOptions, MountFn } from './types';
 
-export function defineEditor(
-  mount: (root: HTMLElement, store: Store) => void,
-  options: CardEditorOptions,
-): CardEditor {
+export function defineEditor(mount: MountFn, options: EditorOptions): CardEditor {
   class Editor extends HTMLElement implements LovelaceCardEditor {
     private store = createStore();
 

@@ -1,5 +1,5 @@
 import { HomeAssistant, LovelaceCard, LovelaceCardConfig } from 'custom-card-helpers';
-import { CardOptions, RegisterCardParams, Store } from './types';
+import { CardOptions, MountFn, RegisterCardParams } from './types';
 import { createStore } from 'jotai/vanilla';
 import { atoms } from './state';
 
@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-export function defineCard(mount: (root: HTMLElement, store: Store) => void, options: CardOptions) {
+export function defineCard(mount: MountFn, options: CardOptions) {
   class Card extends HTMLElement implements LovelaceCard {
     private store = createStore();
 

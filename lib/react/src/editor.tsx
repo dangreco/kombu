@@ -1,22 +1,13 @@
-import { Provider } from 'jotai';
 import { FunctionComponent } from 'react';
-import { createRoot } from 'react-dom/client';
 
-import { CardEditor, CardEditorOptions, defineEditor as define } from '@kombu/core';
+import { CardEditor, EditorOptions, defineEditor as define } from '@kombu/core';
 
+import { mount } from './mount';
 import { OptionsWithMiddleware } from './types';
-import { apply } from './utils';
 
 export function defineEditor(
   C: FunctionComponent,
-  options: CardEditorOptions & OptionsWithMiddleware,
+  options: EditorOptions & OptionsWithMiddleware,
 ): CardEditor {
-  return define((root, store) => {
-    const reactRoot = createRoot(root);
-    reactRoot.render(
-      <Provider store={store}>
-        {options.middleware ? apply(root, options.middleware, <C />) : <C />}
-      </Provider>,
-    );
-  }, options);
+  return define(mount(C, options.middleware), options);
 }
