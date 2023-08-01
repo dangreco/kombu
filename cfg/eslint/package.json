@@ -6,12 +6,17 @@
   "files": [
     "src"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
+    "eslint-plugin-react": "^7.32.2"
+  },
+  "devDependencies": {
     "eslint": "^8.45.0",
-    "eslint-plugin-react": "^7.32.2",
     "shx": "^0.3.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8.45.0"
   },
   "gitHead": "eac6cf66bc116a1186fd09a60bef19de20a9eeb3",
   "publishConfig": {

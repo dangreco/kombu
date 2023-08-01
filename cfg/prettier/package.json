@@ -6,10 +6,15 @@
   "files": [
     "src"
   ],
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0"
+  },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "prettier": "^3.0.0",
     "shx": "^0.3.4"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.0"
   },
   "gitHead": "eac6cf66bc116a1186fd09a60bef19de20a9eeb3",
   "publishConfig": {
